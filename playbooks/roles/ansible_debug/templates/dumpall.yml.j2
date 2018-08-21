@@ -14,25 +14,25 @@ GROUPS Variables ("groups"):
 --------------------------------
 {{ groups | to_nice_yaml }}
 
-{% if lms_env_config %}
+{% if lms_env_config is defined %}
 LMS env variables:
 ---------------
 {{ lms_env_config | to_nice_yaml }}
 {% endif %}
 
-{% if lms_auth_config %}
+{% if lms_auth_config is defined %}
 LMS auth variables:
 ---------------
 {{ lms_auth_config | to_nice_yaml }}
 {% endif %}
 
-{% if cms_env_config %}
+{% if cms_env_config is defined %}
 CMS env variables:
 ---------------
 {{ cms_env_config | to_nice_yaml }}
 {% endif %}
 
-{% if cms_auth_config %}
+{% if cms_auth_config is defined %}
 CMS auth variables:
 ---------------
 {{ cms_auth_config | to_nice_yaml }}
