@@ -18,6 +18,8 @@ HOST Variables ("hostvars"):
 --------------------------------
 {{ hostvars | to_nice_json }}
 
+{#
+
 {% if lms_env_config is defined %}
 LMS env variables:
 ---------------
@@ -41,3 +43,5 @@ CMS auth variables:
 ---------------
 {{ cms_auth_config | to_nice_json }}
 {% endif %}
+
+#}
